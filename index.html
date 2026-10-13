@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mary Jane Ogabang's portfolio for remote virtual assistant, customer support, and content support opportunities.">
+  <title>Mary Jane Ogabang | Remote Support & Creative Portfolio</title>
+  <style>
+    :root { --ink:#202033; --muted:#62647a; --paper:#fbfaff; --white:#fff; --purple:#7257d8; --pink:#f0b7d5; --line:#e8e4f2; --soft:#f1edff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter, "Segoe UI", Arial, sans-serif; color:var(--ink); background:var(--paper); line-height:1.65; }
+    a { color:inherit; }
+    .wrap { width:min(1080px, 90%); margin:auto; }
+    header { padding:22px 0; background:rgba(251,250,255,.94); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; backdrop-filter:blur(12px); }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:-.04em; }
+    .brand span { color:var(--purple); }
+    .navlinks { display:flex; gap:22px; flex-wrap:wrap; }
+    .navlinks a { text-decoration:none; color:var(--muted); font-size:.92rem; }
+    .navlinks a:hover { color:var(--purple); }
+    .hero { padding:88px 0 74px; background:radial-gradient(circle at 82% 20%, #f7d8e9 0, transparent 27%), radial-gradient(circle at 10% 90%, #e6ddff 0, transparent 30%); }
+    .hero-grid { display:grid; grid-template-columns:1.35fr .65fr; gap:48px; align-items:center; }
+    .eyebrow { color:var(--purple); text-transform:uppercase; font-weight:800; letter-spacing:.14em; font-size:.76rem; }
+    h1 { font-size:clamp(2.7rem, 6vw, 4.8rem); line-height:1.04; letter-spacing:-.06em; margin:14px 0 20px; }
+    h1 span { color:var(--purple); }
+    .intro { font-size:1.12rem; color:var(--muted); max-width:620px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-block; padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:750; border:1px solid var(--purple); }
+    .primary { background:var(--purple); color:white; }
+    .secondary { color:var(--purple); background:white; }
+    .profile-card { background:white; padding:26px; border:1px solid var(--line); border-radius:28px; box-shadow:0 18px 55px #30205c12; transform:rotate(2deg); }
+    .avatar { width:84px; height:84px; display:grid; place-items:center; background:var(--soft); color:var(--purple); border-radius:24px; font-size:2rem; font-weight:900; margin-bottom:18px; }
+    .profile-card h2 { margin:0 0 6px; font-size:1.3rem; }
+    .profile-card p { color:var(--muted); margin:0; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .chip { font-size:.8rem; background:var(--soft); color:#4e3b9e; border-radius:999px; padding:6px 10px; }
+    section { padding:72px 0; }
+    .section-head { max-width:650px; margin-bottom:30px; }
+    h2.section-title { font-size:clamp(1.9rem,4vw,2.7rem); letter-spacing:-.04em; line-height:1.12; margin:8px 0 12px; }
+    .section-head p, .muted { color:var(--muted); }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:white; border:1px solid var(--line); border-radius:20px; padding:24px; }
+    .icon { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:var(--soft); font-size:1.3rem; margin-bottom:16px; }
+    .card h3 { margin:0 0 8px; }
+    .card p { margin:0; color:var(--muted); font-size:.96rem; }
+    .work-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .sample { background:white; border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+    .sample-top { min-height:150px; padding:24px; display:flex; flex-direction:column; justify-content:flex-end; background:linear-gradient(135deg,#e7deff,#f9dce9); }
+    .sample:nth-child(2) .sample-top { background:linear-gradient(135deg,#d8f0e8,#e2e0ff); }
+    .sample:nth-child(3) .sample-top { background:linear-gradient(135deg,#ffe6c9,#f7d9eb); }
+    .sample:nth-child(4) .sample-top { background:linear-gradient(135deg,#dceaff,#d9f1e9); }
+    .sample-top small { text-transform:uppercase; letter-spacing:.12em; font-weight:800; color:#514278; }
+    .sample-top strong { font-size:1.5rem; line-height:1.15; max-width:390px; margin-top:8px; }
+    .sample-body { padding:22px 24px 24px; }
+    .sample-body p { color:var(--muted); margin:0 0 12px; }
+    .sample-body ul { margin:0; padding-left:19px; }
+    .skill-layout { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+    .skill-list { display:flex; flex-wrap:wrap; gap:10px; }
+    .skill { background:white; border:1px solid var(--line); padding:10px 13px; border-radius:12px; }
+    .timeline { border-left:2px solid var(--line); padding-left:24px; }
+    .job { position:relative; padding-bottom:24px; }
+    .job:before { content:""; position:absolute; left:-31px; top:8px; width:12px; height:12px; background:var(--purple); border:3px solid var(--paper); border-radius:50%; }
+    .job h3 { margin:0; }
+    .job .date { font-size:.88rem; color:var(--purple); font-weight:750; }
+    .job p { color:var(--muted); margin:6px 0 0; }
+    .contact { background:#25213a; color:white; border-radius:28px; padding:42px; display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; }
+    .contact p { color:#d3cfe5; }
+    .contact .btn { background:white; color:#4e3b9e; border-color:white; }
+    footer { padding:28px 0; color:var(--muted); font-size:.88rem; }
+    @media(max-width:760px) {
+      .hero-grid,.skill-layout,.contact { grid-template-columns:1fr; }
+      .cards { grid-template-columns:1fr; }
+      .work-grid { grid-template-columns:1fr; }
+      .navlinks { gap:12px; }
+      .hero { padding:60px 0; }
+      section { padding:54px 0; }
+      .profile-card { transform:none; }
+      .contact { padding:28px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <div class="brand">Jane<span>.</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#services">What I Can Do</a><a href="#portfolio">Samples</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Remote Support · Creative Assistance</div>
+        <h1>Hi, I’m Mary Jane.<br><span>I help teams stay organized and connected.</span></h1>
+        <p class="intro">A customer-support professional building a remote career in virtual assistance, content support, and simple social media design. I bring clear communication, attention to detail, and a willingness to learn new tools and workflows.</p>
+        <div class="actions">
+          <a class="btn primary" href="#portfolio">Explore my samples</a>
+          <a class="btn secondary" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="avatar">MJ</div>
+        <h2>Mary Jane Ogabang</h2>
+        <p>Remote Support & Creative Portfolio</p>
+        <div class="chips"><span class="chip">Customer Support</span><span class="chip">Canva</span><span class="chip">CapCut</span><span class="chip">Content Moderation</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">About me</div>
+        <h2 class="section-title">Reliable support with a creative mindset.</h2>
+        <p>I have experience supporting customers in a blended phone, email, and chat environment, along with online content moderation. I’m now looking to contribute those communication and problem-solving skills to a remote team while growing my capabilities in virtual assistance and digital content.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">💬</div><h3>Clear communication</h3><p>Comfortable helping people, clarifying issues, and keeping messages professional and easy to understand.</p></article>
+        <article class="card"><div class="icon">🔎</div><h3>Attention to detail</h3><p>Experience reviewing online content against guidelines and taking action on policy violations.</p></article>
+        <article class="card"><div class="icon">🎨</div><h3>Creative support</h3><p>Canva and CapCut basics for simple social content, short-form video edits, and visual concepts.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="background:#f3f0fb">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">How I can help</div>
+        <h2 class="section-title">Practical support for everyday tasks.</h2>
+        <p>These are services I can support or am actively developing. I’m transparent about my current skill level and open to training on your team’s tools.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">📨</div><h3>Customer communication</h3><p>Responding to customer questions, documenting concerns, following response guidelines, and escalating issues when needed.</p></article>
+        <article class="card"><div class="icon">🗂️</div><h3>Online task support</h3><p>Following checklists, organizing information, updating simple trackers, and completing repetitive tasks carefully.</p></article>
+        <article class="card"><div class="icon">📱</div><h3>Social media assistance</h3><p>Drafting captions, preparing Canva graphics, brainstorming content ideas, and editing simple clips in CapCut.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Selected samples</div>
+        <h2 class="section-title">A few examples of how I think and create.</h2>
+        <p>The examples below are self-created concept samples for portfolio demonstration, not paid client work. Replace or supplement them with your own Canva/CapCut designs when ready.</p>
+      </div>
+      <div class="work-grid">
+        <article class="sample">
+          <div class="sample-top"><small>Social media concept</small><strong>Make space for a better workday.</strong></div>
+          <div class="sample-body"><p><b>Goal:</b> Create a positive, easy-to-read post for a productivity or remote-work page.</p><ul><li>Simple headline hierarchy</li><li>Soft color palette</li><li>Clear, encouraging message</li></ul></div>
+        </article>
+        <article class="sample">
+          <div class="sample-top"><small>Caption writing</small><strong>Small steps. Steady progress.</strong></div>
+          <div class="sample-body"><p><b>Sample caption:</b> You don’t have to finish everything today. Choose one priority, take the next step, and build momentum from there.</p><p class="muted">Suggested CTA: What’s one thing you want to complete today?</p></div>
+        </article>
+        <article class="sample">
+          <div class="sample-top"><small>Customer support</small><strong>Helpful, calm, and solution-focused.</strong></div>
+          <div class="sample-body"><p><b>Sample reply:</b> Thanks for letting us know. I understand how inconvenient this is. I’ll review the details and guide you through the next steps. If this needs further review, I’ll escalate it to the appropriate team.</p><p class="muted">Demonstrates empathy, clarity, and expectation-setting.</p></div>
+        </article>
+        <article class="sample">
+          <div class="sample-top"><small>Short-form video idea</small><strong>A 15-second reset for busy days.</strong></div>
+          <div class="sample-body"><p><b>Storyboard:</b> 0–3s: close laptop and pause. 3–7s: stretch and drink water. 7–12s: write one priority. 12–15s: return to work with a clear next step.</p><p class="muted">Can be developed into a short CapCut edit with text overlays and royalty-free audio.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="background:#f3f0fb">
+    <div class="wrap skill-layout">
+      <div>
+        <div class="eyebrow">Tools & strengths</div>
+        <h2 class="section-title">What I bring to the team.</h2>
+        <div class="skill-list">
+          <span class="skill">Customer service</span><span class="skill">Phone support</span><span class="skill">Email support</span><span class="skill">Chat support</span><span class="skill">Content moderation</span><span class="skill">Canva basics</span><span class="skill">CapCut basics</span><span class="skill">Shopify basics</span><span class="skill">Facebook content</span><span class="skill">Following SOPs</span><span class="skill">Written communication</span><span class="skill">Willingness to learn</span>
+        </div>
+        <p class="muted" style="margin-top:18px">Tools and proficiency should be described honestly in interviews. Add any additional tools only after you’ve used them.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Relevant experience</div>
+        <h2 class="section-title">Work history</h2>
+        <div class="timeline">
+          <div class="job"><div class="date">Apr 2026 – Aug 2026</div><h3>Compliance / Content Moderator</h3><p>StaffMe Online, LLC · Reviewed content, applied platform guidelines, and took action on violations according to moderation procedures.</p></div>
+          <div class="job"><div class="date">Aug 2024 – Nov 2025</div><h3>Customer Service Representative</h3><p>Concentrix · Supported Google Play / Google One customers through a blended phone, email, and chat environment, including payment and refund-related concerns.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <div class="eyebrow" style="color:#d6caff">Let’s connect</div>
+          <h2 class="section-title" style="color:white">Looking for a dependable remote team.</h2>
+          <p>I’m interested in entry-level virtual assistant, customer support, content support, and social media assistant opportunities where I can contribute, learn, and grow.</p>
+        </div>
+        <div>
+          <p><b>Email:</b> <a href="mailto:janeogabang000@gmail.com">janeogabang000@gmail.com</a></p>
+          <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mary-jane-ogabang-311191285/" target="_blank" rel="noopener">linkedin.com/in/mary-jane-ogabang-311191285</a></p>
+          <p><b>Phone:</b> <a href="tel:+639305299461">+639305299461</a></p>
+          <div class="actions"><a class="btn" href="https://www.linkedin.com/in/mary-jane-ogabang-311191285/" target="_blank" rel="noopener">View LinkedIn</a><a class="btn" href="mailto:janeogabang000@gmail.com">Email me</a><a class="btn" href="tel:+639305299461">Call me</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Mary Jane Ogabang · Portfolio for remote support and creative assistance opportunities.</div></footer>
+</body>
+</html>
